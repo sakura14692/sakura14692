@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "2JKSAowefhObMax/TcEF9SIlmF5h70FMxqMLwEFlYmj5SBXIPnFQdjQNbpDhcBTjFjAmfw1q6KrugflJFO/2zw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\tich_hop_google\\tich_hop_google\\tich_hop_google.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\cef.redist.x64\\91.1.21\\cef.redist.x64.91.1.21.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\cef.redist.x86\\91.1.21\\cef.redist.x86.91.1.21.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\cefsharp.common\\91.1.211\\cefsharp.common.91.1.211.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\cefsharp.common.netcore\\91.1.211\\cefsharp.common.netcore.91.1.211.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\cefsharp.wpf\\91.1.211\\cefsharp.wpf.91.1.211.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\cefsharp.wpf.netcore\\91.1.211\\cefsharp.wpf.netcore.91.1.211.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\chromiumembeddedframework.runtime\\91.1.21\\chromiumembeddedframework.runtime.91.1.21.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CefSharp.Wpf 91.1.211' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CefSharp.Wpf",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}

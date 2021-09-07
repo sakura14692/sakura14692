@@ -1,0 +1,21 @@
+﻿using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace quan_ly_tai_chinh_kinh_doanh
+{
+    public partial class form_Khung_Cai_dat_He_thong : DevExpress.XtraEditors.XtraForm
+    {
+        public form_Khung_Cai_dat_He_thong()
+        {
+            InitializeComponent();
+        }
+    }
+}

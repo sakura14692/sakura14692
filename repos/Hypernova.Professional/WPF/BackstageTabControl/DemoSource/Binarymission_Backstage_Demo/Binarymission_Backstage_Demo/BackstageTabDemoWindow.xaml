@@ -1,0 +1,241 @@
+﻿<windowControls:BinaryRibbonWindow 
+        x:Class="Binarymission.Demos.BackstageTabControlDemo.BackstageTabDemoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Binarymission.WPF.Controls.AdvancedTabControls;assembly=Binarymission.WPF.Controls.BackstageTabControl"
+        xmlns:windowControls="clr-namespace:Binarymission.WPF.Controls.WindowControls;assembly=Binarymission.WPF.Controls.BinaryRibbon"
+        xmlns:userControls="clr-namespace:Binarymission.Demos.BackstageTabControlDemo.UserControls"
+        Title="Binarymission Backstage Tab/Menu Control Demo" 
+        Height="450" Width="825" 
+        Icon="app.ico"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="0 30 0 0">
+        <Border BorderBrush="Transparent" BorderThickness="4">
+            <Grid Background="White">
+                <local:BackstageTabControl MenuItemSelectedStateFillBrush="{Binding SelectedColorBrush, ElementName=tabItemfillColorBox}"
+                                           MenuItemSelectedStateBorderBrush="{Binding SelectedColorBrush, ElementName=tabItemBorderColorBox}"
+                                           HoverTabItemBackgroundBrush="{Binding SelectedColorBrush, ElementName=tabItemHoverfillColorBox}"
+                                           HoverTabItemBorderBrush="{Binding SelectedColorBrush, ElementName=tabItemHoverBorderBrushColorBox}"
+                                           MenuBackgroundBrush="{Binding SelectedColorBrush, ElementName=tabMenuSystemBackgroundBrushColorBox}"
+                                           MenuBorderBrush="{Binding SelectedColorBrush, ElementName=tabMenuSystemBorderBrushColorBox}"
+                                           MenuItemSelectedStateBorderThickness="{Binding MenuItemSelectedStateBorderThickness}"
+                                           MenuItemHeight="42" MenuItemWidth="132">
+
+                    <!-- "General" Tab item -->
+                    <TabItem Header="General">
+                        <Grid Margin="4 15 15 15">
+                            <Grid Grid.Column="0" Margin="0 0 2 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Row="0" Margin="4 4 4 10">
+                                    <TextBlock VerticalAlignment="Center" Margin="5 0 0 0" Text="Configure Backstage Tab Control Colors" FontSize="14" FontWeight="Bold"/>
+                                </StackPanel>
+                                <Grid Grid.Row="1" Margin="4 10 4 10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <userControls:BrushSelector x:Name="tabItemfillColorBox"
+                                                                LabelText="Tab item background brush:" 
+                                                                SelectedColorBrush="LightSeaGreen" Grid.Row="0" />
+                                    <userControls:BrushSelector x:Name="tabItemBorderColorBox" 
+                                                                LabelText="Tab item border brush:"
+                                                                Grid.Row="1"
+                                                                SelectedColorBrush="#008000" />
+                                    <userControls:BrushSelector x:Name="tabItemHoverfillColorBox"
+                                                                LabelText="Tab item hover background brush:"
+                                                                Grid.Row="2"
+                                                                SelectedColorBrush="#AEC67D"/>
+                                    <userControls:BrushSelector x:Name="tabItemHoverBorderBrushColorBox"
+                                                                LabelText="Tab item hover border brush:"
+                                                                Grid.Row="3" 
+                                                                SelectedColorBrush="#6A203E"/>
+                                    <userControls:BrushSelector x:Name="tabMenuSystemBackgroundBrushColorBox"
+                                                                LabelText="Tab control background brush:"
+                                                                Grid.Row="4"
+                                                                SelectedColorBrush="#E8ECF0"/>
+                                    <userControls:BrushSelector x:Name="tabMenuSystemBorderBrushColorBox" 
+                                                                LabelText="Tab control border brush:" 
+                                                                Grid.Row="5" 
+                                                                SelectedColorBrush="LightGray"/>
+
+                                    <Grid Grid.Row="6" Margin="0 20 0 0">
+                                        <TextBlock FontSize="12" FontWeight="Bold" Text="More Options:" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="7" Margin="0 10 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="250"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock FontSize="12" Text="Should draw border around tab item:" />
+                                        <CheckBox Grid.Column="1"
+                                                  HorizontalAlignment="Center"
+                                                  IsChecked="False" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked"/>
+                                    </Grid>
+
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+
+                    <!-- "Dashboard" Tab item -->
+                    <TabItem Header="Dashboard" IsSelected="True">
+                        <Grid Margin="4 15 15 15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="7*"/>
+                                <ColumnDefinition Width="1"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0" Margin="0 0 2 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0">
+                                    <TextBlock VerticalAlignment="Center" Margin="5 0 0 0" Text="Priorities" FontSize="14" FontWeight="Bold"/>
+                                </StackPanel>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <windowControls:BinaryRibbonGroup HorizontalAlignment="Left" Margin="0 10 4 2" Width="120" Grid.Column="0">
+                                        <windowControls:BinaryRibbonDropDownButton Width="124" LargeImage="images/Projects.png"
+                                                                                             Content="Projects">
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Rebuild Projects" Image="images/24bits/ReBuild.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Change Strong n.Name" Image="images/24bits/Strongname.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Update Tooling" Image="images/24bits/Update-Tooling.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Run Automated Tests" Image="images/24bits/Run-Tests.png"  />
+                                        </windowControls:BinaryRibbonDropDownButton>
+                                    </windowControls:BinaryRibbonGroup>
+
+                                    <Grid Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Text="Project Tasks" FontWeight="Bold" Grid.Row="0"/>
+                                        <TextBlock Margin="0 5 0 0" Grid.Row="1" Text="These represent project related tasks to be performed today." TextWrapping="Wrap"/>
+
+                                    </Grid>
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <windowControls:BinaryRibbonGroup HorizontalAlignment="Left" Margin="0 10 4 2" Width="120" Grid.Column="0">
+                                        <windowControls:BinaryRibbonDropDownButton Width="124" LargeImage="images/Reports.png"
+                                                                                         Content="Reports">
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Generate All Reports..." Image="images/24bits/ReBuild.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Review Bug Reports" Image="images/24bits/Strongname.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Report Of Recently Raised Bugs" Image="images/24bits/Update-Tooling.png" />
+                                        </windowControls:BinaryRibbonDropDownButton>
+                                    </windowControls:BinaryRibbonGroup>
+
+                                    <Grid Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Text="Report Builder" FontWeight="Bold" Grid.Row="0"/>
+                                        <TextBlock Margin="0 5 0 0" Grid.Row="1" Text="Generate various reports as desired." TextWrapping="Wrap"/>
+
+                                    </Grid>
+                                </Grid>
+
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <windowControls:BinaryRibbonGroup HorizontalAlignment="Left" Margin="0 10 4 2" Width="120" Grid.Column="0">
+                                        <windowControls:BinaryRibbonDropDownButton Width="124" LargeImage="images/Group-Activities.png"
+                                                                                         Content="Team">
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="Brainstorming session" Image="images/24bits/ReBuild.png" />
+                                            <windowControls:BinaryRibbonApplicationMenuItem Header="UAT feedback discusson" Image="images/24bits/Strongname.png" />
+                                        </windowControls:BinaryRibbonDropDownButton>
+                                    </windowControls:BinaryRibbonGroup>
+
+                                    <Grid Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Text="Team Activities" FontWeight="Bold" Grid.Row="0"/>
+                                        <TextBlock Margin="0 5 0 0" Grid.Row="1" Text="Pick tasks planned and scheduled to be performed by the teams this week." TextWrapping="Wrap"/>
+
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+
+                            <Rectangle Grid.Column="1" Stroke="Gray" StrokeThickness="1" StrokeDashArray="2 2" SnapsToDevicePixels="True"/>
+
+                            <Grid Grid.Column="2"  Margin="10 0 0 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Dashboard" FontWeight="Bold" Grid.Row="0"/>
+                                <TextBlock Margin="0 5 0 0" Grid.Row="1" Text="Use this module to build projects, generate reports and perform other team activities." TextWrapping="Wrap"/>
+
+                                <Border Grid.Row="2" Background="LightGreen" VerticalAlignment="Bottom">
+                                    <TextBlock Margin="9 5 5 5" Text="For any help with this module, please contact Utilities helpdesk via chat or email services." TextWrapping="Wrap"/>
+                                </Border>
+                            </Grid>
+
+                        </Grid>
+                    </TabItem>
+
+                    <!-- "Release priorities" Tab item -->
+                    <TabItem Header="Release priorities"/>
+
+                    <!-- "Sales" Tab item -->
+                    <TabItem Header="Sales"/>
+
+                    <!-- "Emails" Tab item -->
+                    <TabItem Header="Emails"/>
+
+                    <!-- "Invoices" Tab item -->
+                    <TabItem Header="Invoices"/>
+
+                    <!-- "App exit" Tab item -->
+                    <TabItem PreviewMouseUp="AppExitRequested">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="images/App-Exit.png" Width="12" Height="12"/>
+                                <TextBlock VerticalAlignment="Center" Margin="5 0 0 0" Text="Exit"/>
+                            </StackPanel>
+                        </TabItem.Header>
+                    </TabItem>
+                </local:BackstageTabControl>
+            </Grid>
+        </Border>
+    </DockPanel>
+</windowControls:BinaryRibbonWindow>
+        
+        

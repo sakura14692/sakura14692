@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\bin\Release\quan_li_hoc_sinh.exe.config
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\bin\Release\quan_li_hoc_sinh.exe
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\bin\Release\quan_li_hoc_sinh.pdb
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.Form1.resources
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.Properties.Resources.resources
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.csproj.GenerateResource.cache
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.exe
+C:\Users\user\source\repos\quan_li_hoc_sinh\quan_li_hoc_sinh\obj\Release\quan_li_hoc_sinh.pdb

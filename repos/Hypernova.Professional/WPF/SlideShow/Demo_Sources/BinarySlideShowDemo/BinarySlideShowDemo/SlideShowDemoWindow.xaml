@@ -1,0 +1,382 @@
+﻿<windowControls:BinaryRibbonWindow 
+    x:Class="BinarySlideShowDemo.SlideShowDemoWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:BinarySlideShowDemonstrationApp.Converters"
+    xmlns:windowControls="clr-namespace:Binarymission.WPF.Controls.WindowControls;assembly=Binarymission.WPF.Controls.BinaryRibbon"
+    xmlns:advancedInteractionControls="clr-namespace:Binarymission.WPF.Controls.AdvancedInteractionControls;assembly=Binarymission.WPF.Controls.AdvancedInteractionControls.SlideShow"
+    xmlns:spinners="clr-namespace:Binarymission.WPF.Controls.InputControls.Spinners;assembly=Binarymission.WPF.Controls.InputControls.Spinners"
+    WindowStartupLocation="CenterScreen"
+    Title="Binarymission SlideShow WPF .NET control demo"
+    x:Name="WindowInstance"
+    Height="768"
+    Width="1024"
+    Icon="App.ico">
+
+    <DockPanel LastChildFill="True">
+        <DockPanel.Resources>
+            <converters:VisibilityConverter x:Key="VisibilityConverter" />
+            <converters:SecondsToMilliSecondsConverter x:Key="SecondsToMilliSecondsConverter" />
+        </DockPanel.Resources>
+
+        <windowControls:BinaryRibbonBarPanel x:Name="BinaryRibbonControl" 
+                                             TitleText="BinarySlideShow .NET Demonstration." 
+                                             DockPanel.Dock="Top">
+
+            <!-- Set up the Application menu -->
+            <windowControls:BinaryRibbonBarPanel.ApplicationMenu>
+                <windowControls:BinaryRibbonApplicationMenu 
+                    windowControls:BinaryKeyTip.AccessKey="F" 
+                    ButtonImage="binarymissionImages/general/home32.png">
+
+                    <windowControls:BinaryRibbonApplicationMenuItem 
+                        windowControls:BinaryKeyTip.AccessKey="V" 
+                        Header="Print" 
+                        Image="binarymissionImages/32x32/print.png">
+
+                        <windowControls:BinaryRibbonApplicationMenuItem.SubMenuTitleContent>
+                            <StackPanel>
+                                <TextBlock Text="Preview and print the document"
+                                           TextAlignment="Left" 
+                                           FontWeight="Bold"
+                                           Foreground="Black"/>
+                            </StackPanel>
+                        </windowControls:BinaryRibbonApplicationMenuItem.SubMenuTitleContent>
+
+                        <windowControls:BinaryRibbonApplicationMenuItem 
+                            windowControls:BinaryKeyTip.AccessKey="P"
+                            Image="binarymissionImages/32x32/print.png" 
+                            Height="Auto">
+                            <windowControls:BinaryRibbonApplicationMenuItem.Header>
+                                <StackPanel>
+                                    <TextBlock Text="Print" 
+                                               FontWeight="Bold"/>
+                                    <TextBlock Margin="0, 6, 0, 0" 
+                                               TextWrapping="Wrap" 
+                                               Text="Select a printer, number of copies, and other printing options before printing" />
+                                </StackPanel>
+                            </windowControls:BinaryRibbonApplicationMenuItem.Header>
+                        </windowControls:BinaryRibbonApplicationMenuItem>
+
+                        <windowControls:BinaryRibbonApplicationMenuItem 
+                            windowControls:BinaryKeyTip.AccessKey="Q" 
+                            Image="binarymissionImages/32x32/quickprint.png" 
+                            Height="Auto">
+                            <windowControls:BinaryRibbonApplicationMenuItem.Header>
+                                <StackPanel>
+                                    <TextBlock Text="Quick print" 
+                                               FontWeight="Bold"/>
+                                    <TextBlock Margin="0, 6, 0, 0" 
+                                               TextWrapping="Wrap" 
+                                               Text="Send the document to the default printer without making any change"/>
+                                </StackPanel>
+                            </windowControls:BinaryRibbonApplicationMenuItem.Header>
+                        </windowControls:BinaryRibbonApplicationMenuItem>
+
+                        <windowControls:BinaryRibbonApplicationMenuItem
+                            windowControls:BinaryKeyTip.AccessKey="V" 
+                            Image="binarymissionImages/32x32/preview.png"
+                            Height="Auto">
+                            <windowControls:BinaryRibbonApplicationMenuItem.Header>
+                                <StackPanel>
+                                    <TextBlock Text="Print preview"
+                                               FontWeight="Bold"/>
+                                    <TextBlock Margin="0, 6, 0, 0"
+                                               TextWrapping="Wrap" 
+                                               Text="Preview and make changes to the document before printing"/>
+                                </StackPanel>
+                            </windowControls:BinaryRibbonApplicationMenuItem.Header>
+                        </windowControls:BinaryRibbonApplicationMenuItem>
+
+                    </windowControls:BinaryRibbonApplicationMenuItem>
+                    <windowControls:BinaryRibbonApplicationMenuItem 
+                        windowControls:BinaryKeyTip.AccessKey="R" 
+                        Header="Prepare"
+                        Image="binarymissionImages/32x32/prepare.png"
+                        Height="Auto"/>
+                    <windowControls:BinaryRibbonApplicationMenuItem 
+                        windowControls:BinaryKeyTip.AccessKey="M"
+                        Header="Send" 
+                        Image="binarymissionImages/32x32/sendmail.png" 
+                        Height="Auto"/>
+                    <windowControls:BinaryRibbonApplicationMenuItem 
+                        windowControls:BinaryKeyTip.AccessKey="H" 
+                        Header="Publish" 
+                        Image="binarymissionImages/32x32/publish.png" 
+                        Height="Auto"/>
+                    <Separator/>
+                    <windowControls:BinaryRibbonApplicationMenuItem 
+                        windowControls:BinaryKeyTip.AccessKey="C"
+                        Header="Close"
+                        Image="binarymissionImages/32x32/close.png"
+                        Height="Auto"/>
+                    <windowControls:BinaryRibbonApplicationMenu.FooterContent>
+                        
+                        <StackPanel HorizontalAlignment="Right"
+                                    Orientation="Horizontal"
+                                    Margin="0,4,0,0">
+
+                            <Button HorizontalAlignment="Right" 
+                                    VerticalAlignment="Center">
+                                <Button.Content>
+                                    <StackPanel HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Image Margin="4" 
+                                               Source="binarymissionImages/general/wordoptions16.png" />
+                                        <TextBlock HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" 
+                                                   Margin="4, 4, 6, 4" 
+                                                   Text="About" />
+                                    </StackPanel>
+                                </Button.Content>
+                            </Button>
+
+                            <Button HorizontalAlignment="Right" 
+                                    VerticalAlignment="Center" 
+                                    Command="{x:Static windowControls:BinaryRibbonWindow.CloseWindow}">
+                                <Button.Content>
+                                    <StackPanel HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Image Margin="4" 
+                                               Source="binarymissionImages/general/exit16.png" />
+                                        <TextBlock HorizontalAlignment="Center" 
+                                                   VerticalAlignment="Center"
+                                                   Margin="4, 4, 6, 4" 
+                                                   Text="Close Demo" />
+                                    </StackPanel>
+                                </Button.Content>
+
+                            </Button>
+                        </StackPanel>
+                    </windowControls:BinaryRibbonApplicationMenu.FooterContent>
+                    
+                </windowControls:BinaryRibbonApplicationMenu>
+            </windowControls:BinaryRibbonBarPanel.ApplicationMenu>
+
+            <!-- Setup the first tab item: "Slide show" -->
+            <windowControls:BinaryRibbonTabItem  
+                windowControls:BinaryKeyTip.AccessKey="H" 
+                x:Name="HomeTab" 
+                HeaderText="Slide show">
+
+                <windowControls:BinaryRibbonGroup
+                            HorizontalContentAlignment="Left"
+                            windowControls:BinaryKeyTip.AccessKey="GF" 
+                            TitleText=" Custom slide images "
+                            Image="binarymissionImages/16x16/paste.png" CanShowModalDialog="False">
+
+                    <windowControls:BinaryRibbonButton
+                        LargeImage="binarymissionImages/32x32/search.png"
+                        Click="HandleOwnSlidesContentSetupRequested"
+                        x:Name="ButtonOwnContent"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"
+                        Content="Choose custom slides..." />
+
+                </windowControls:BinaryRibbonGroup>
+
+                <windowControls:BinaryRibbonGroup IsEnabled="{Binding ElementName=explicit, Path=IsChecked}" 
+                                                  Visibility="{Binding ElementName=explicit, Path=IsChecked, Converter={StaticResource VisibilityConverter}}" windowControls:BinaryKeyTip.AccessKey="GC" TitleText=" Slide show rendering options "
+                                                  Image="binarymissionImages/16x16/paste.png" 
+                                                  CanShowModalDialog="False">
+
+                    <StackPanel Orientation="Horizontal" 
+                                Margin="6">
+                        
+                        <Label Margin="0 0 3 0"
+                               Content="Choose a slide transition effect:" />
+                        <windowControls:BinaryRibbonComboBox x:Name="SlideShowTransitionEffects" 
+                                                             SelectedIndex="0"
+                                                             VerticalContentAlignment="Center"
+                                                             SelectionChanged="HandleChangeToTransitionEffectChosen" 
+                                                             Image="binarymissionImages/16x16/gallary.png" />
+                    </StackPanel>
+
+                    <Grid Margin="15 0 10 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <CheckBox x:Name="UseTimer"
+                                  IsChecked="True"
+                                  Checked="HandleTimerUsageChecked"
+                                  Unchecked="HandleTimerUsageUnchecked" 
+                                  Margin="0 10 0 10"
+                                  Content="Use timer based transition" />
+
+                        <CheckBox x:Name="PlayAfterResuming"
+                                  Grid.Row="1"
+                                  IsEnabled="{Binding ElementName=UseTimer, Path=IsChecked }"
+                                  Margin="0 1 0 10"
+                                  Content="Play after resuming, when using timer-transition" />
+                    </Grid>
+
+                    <Grid Margin="15 6 10 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                                Margin="0 0 3 0"
+                               Content="Timer interval:" />
+
+                        <spinners:NumericSpinner Grid.Column="1" 
+                                 Width="65"
+                                 NavigationVisualOnMouseOverBorderBrush="Black"
+                                 NavigationVisualOnMouseOverBrush="OrangeRed"
+                                 Increment="1"
+                                 NavigationVisualStroke="Black"
+                                 BorderBrush="Black"
+                                 BorderThickness="1"
+                                 Padding="2"
+                                 MinimumValue="1"
+                                 MaximumValue="10"
+                                 VerticalContentAlignment="Center"
+                                 IsEnabled="{Binding ElementName=UseTimer, Path=IsChecked}"
+                                 x:Name="TimerInterval"
+                                 Value="{Binding SlideTransitionTimerInterval, Mode=TwoWay, Converter={StaticResource SecondsToMilliSecondsConverter}}" />
+                     </Grid>
+
+                </windowControls:BinaryRibbonGroup>
+
+            </windowControls:BinaryRibbonTabItem>
+
+        </windowControls:BinaryRibbonBarPanel>
+
+        <Grid Background="Black"
+              HorizontalAlignment="Center" 
+              VerticalAlignment="Center">
+            
+            <Grid.Resources>
+                <converters:WidthConverter x:Key="WidthConverter" />
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- SlideShow control instance setup goes here -->
+            <StackPanel 
+                Grid.Row="0"
+                Orientation="Horizontal"
+                Margin="10">
+                <advancedInteractionControls:BinarySlideShow x:Name="SlideShow"
+                          SlideTransitionTimerInterval="{Binding SlideTransitionTimerInterval}"
+                          StartSlideShowOnceInstantiated="False"
+                          Width="1024" 
+                          Height="768"
+                          IsShowDefaultBlankSlideAtStartup ="False" />
+            </StackPanel>
+
+            <!-- Rest of the UI stuff -->
+            <StackPanel Margin="8 8 8 16" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Grid.Row="1" 
+                        Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.MergedDictionaries>
+                            <ResourceDictionary Source="pack://application:,,,/Binarymission.WPF.Controls.AdvancedInteractionControls.SlideShow;component/themes/BinaryGlassButton.xaml"/>
+                        </ResourceDictionary.MergedDictionaries>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template" 
+                                    Value="{StaticResource BinaryGlassButtonTemplate}"/>
+                            <Setter Property="Margin" 
+                                    Value="0 0 8 0"/>
+                        </Style>
+                    </ResourceDictionary>
+                </StackPanel.Resources>
+                <ItemsControl Margin="8 2 0 2">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <Button x:Name="GotoFirstSlide" 
+                            Width="28" 
+                            Height="28" 
+                            Click="GoToFirstSlideInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16" Height="16"  Source="pack://application:,,,/;component/binarymissionImages/buttonImages/fastrewind.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="GotoPreviousSlide" 
+                            Width="36" 
+                            Height="36" 
+                            Click="GoToPreviousSlideInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16" 
+                                       Height="16"  
+                                       Source="pack://application:,,,/;component/binarymissionImages/buttonImages/prev.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="PlayOrPause"
+                            Width="48" 
+                            Height="48" 
+                            Click="PlayOrPauseSlideInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16" 
+                                       Height="16"
+                                       Source="pack://application:,,,/;component/binarymissionImages/buttonImages/play.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="Stop" 
+                            Width="48"
+                            Height="48"
+                            Click="StopSlideShowInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16" 
+                                       Height="16" 
+                                       Source="pack://application:,,,/;component/binarymissionImages/buttonImages/stop.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="GotoNextSlide" 
+                            Width="36"
+                            Height="36"
+                            Click="GoToNextSlideInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16"
+                                       Height="16"
+                                       Source="pack://application:,,,/;component/binarymissionImages/buttonImages/next.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                    <Button x:Name="GotoLastSlide"
+                            Width="28" 
+                            Height="28"
+                            Click="GoToLastSlideInvoked">
+                        <Button.Content>
+                            <StackPanel>
+                                <Image Width="16" 
+                                       Height="16" 
+                                       Source="pack://application:,,,/;component/binarymissionImages/buttonImages/fastforward.png"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+
+                </ItemsControl>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</windowControls:BinaryRibbonWindow>

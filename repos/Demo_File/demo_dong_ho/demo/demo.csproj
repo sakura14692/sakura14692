@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1596980736_Hinh-nen-vu-tru-ngan-ha-tinh-van-tuyet-dep.jpg" />
+    <None Remove="1602359707_Tong-hop-hinh-nen-Space-Wallpaper-dep-nhat.jpg" />
+    <None Remove="30-hinh-nen-vu-tru-dai-ngan-ha-thien-ha-dep-4k-cho-pc-laptop-3-scaled.jpg" />
+    <None Remove="86d858e0aa74ec1f586059fd10d213ba.jpg" />
+    <None Remove="daafdb9a2c9575bba99d1ea3c315c973-375.jpg" />
+    <None Remove="pexels-photo-816608.jpeg" />
+    <None Remove="planet-space-and-stars.jpg" />
+    <None Remove="vu_tru1.jpg" />
+    <None Remove="wallpaper-4k.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1596980736_Hinh-nen-vu-tru-ngan-ha-tinh-van-tuyet-dep.jpg" />
+    <Resource Include="1602359707_Tong-hop-hinh-nen-Space-Wallpaper-dep-nhat.jpg" />
+    <Resource Include="30-hinh-nen-vu-tru-dai-ngan-ha-thien-ha-dep-4k-cho-pc-laptop-3-scaled.jpg" />
+    <Resource Include="86d858e0aa74ec1f586059fd10d213ba.jpg" />
+    <Resource Include="daafdb9a2c9575bba99d1ea3c315c973-375.jpg" />
+    <Resource Include="pexels-photo-816608.jpeg" />
+    <Resource Include="planet-space-and-stars.jpg" />
+    <Resource Include="vu_tru1.jpg" />
+    <Resource Include="wallpaper-4k.jpg" />
+  </ItemGroup>
+
+</Project>

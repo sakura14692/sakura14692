@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\client-server\client-server\bin\Debug\client-server.exe.config
+C:\Users\user\source\repos\client-server\client-server\bin\Debug\client-server.exe
+C:\Users\user\source\repos\client-server\client-server\bin\Debug\client-server.pdb
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client_server.client.resources
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client_server.Properties.Resources.resources
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client.csproj.GenerateResource.cache
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client-server.exe
+C:\Users\user\source\repos\client-server\client-server\obj\Debug\client-server.pdb

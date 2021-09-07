@@ -1,0 +1,530 @@
+﻿<Window x:Class="Giao_Dien_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Giao_Dien_Demo" xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Foreground="White"
+        >
+
+
+    <Window.Resources>
+        <Storyboard
+            x:Key="MenuOpen"
+            >
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                Storyboard.TargetName="GridMenu"
+                >
+                <EasingDoubleKeyFrame
+                    KeyTime="0" Value="60"
+                    >
+                    
+                </EasingDoubleKeyFrame>
+
+                <EasingDoubleKeyFrame
+                    KeyTime="0:0:0.5" Value="200"
+                    >
+
+                </EasingDoubleKeyFrame>
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+        <Storyboard
+            x:Key="MenuClose"
+            >
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                Storyboard.TargetName="GridMenu"
+                >
+                <EasingDoubleKeyFrame
+                    KeyTime="0" Value="200"
+                    >
+
+                </EasingDoubleKeyFrame>
+
+                <EasingDoubleKeyFrame
+                    KeyTime="0:0:0.5" Value="60"
+                    >
+
+                </EasingDoubleKeyFrame>
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+
+    </Window.Resources>
+
+    <Window.Triggers>
+
+        <EventTrigger
+            RoutedEvent="ButtonBase.Click"
+            SourceName="ButtonOpenMenu"
+            
+            >
+            
+            <BeginStoryboard 
+                Storyboard="{StaticResource MenuOpen}"
+                >
+                
+            </BeginStoryboard>
+        </EventTrigger>
+        
+
+        <EventTrigger
+            RoutedEvent="ButtonBase.Click"
+            SourceName="ButtonCloseMenu"
+            
+            >
+
+            <BeginStoryboard 
+                Storyboard="{StaticResource MenuClose}"
+                >
+
+            </BeginStoryboard>
+        </EventTrigger>
+
+
+
+
+
+
+
+
+    </Window.Triggers>
+    
+    
+    
+    <Grid
+        
+        >
+        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+       
+        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF392843" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Frame
+            x:Name="Frame_Add_Pages"
+                Grid.Column="1"
+                >
+
+        </Frame>
+
+        <Grid
+            Height="60"
+            VerticalAlignment="Top"
+            Grid.ColumnSpan="2"
+           
+            
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,0.8" StartPoint="0,0">
+                    <GradientStop Color="#2E333A" Offset="0.5"/>
+                    <GradientStop Color="#FF4E177F" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <TextBlock
+                Text="Tài Chính - Kinh Doanh"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="22"
+                >
+                
+            </TextBlock>
+
+           
+            
+            <StackPanel
+                VerticalAlignment="Center"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                >
+                
+                
+                <Button
+                HorizontalAlignment="Right"
+                Height="20"
+                Width="20"
+                    Margin="10"
+                >
+                    <MaterialDesign:PackIcon
+                        Kind="ArrowBack"
+                        >
+                        
+                    </MaterialDesign:PackIcon>
+                </Button>
+
+                <Button
+                HorizontalAlignment="Right"
+                Height="20"
+                Width="20"
+                >
+                    <MaterialDesign:PackIcon
+                        Kind="ArrowForward"
+                        >
+
+                    </MaterialDesign:PackIcon>
+                </Button>
+
+
+
+               
+                
+                
+                
+                <MaterialDesign:PopupBox
+                HorizontalAlignment="Right"
+                Margin="10"
+                PlacementMode="BottomAndAlignRightEdges"
+                StaysOpen="False"
+                 
+                
+                >
+                    <StackPanel
+                        Width="150"
+                        >
+                        <Button
+                            Content="Thiết lập"
+                            Foreground="SlateBlue"
+                            
+                            >
+                            
+                        </Button>
+
+                        <Button
+                            
+                            Content="Tài khoản"
+                             Foreground="SlateBlue"
+                            >
+
+                        </Button>
+                        
+                        <Button
+                            Content="Trợ giúp"
+                             Foreground="SlateBlue"
+                            >
+
+                        </Button>
+                        
+                        <Separator
+                           Background="SlateBlue"
+                            >
+                            
+                        </Separator>
+
+                        <Button
+                            x:Name="ButtonPopup_Dang_Xuat"
+                            Content="Đăng xuất"
+                             Foreground="SlateBlue"
+                            Click="ButtonPopup_Dang_Xuat_Click" 
+                            >
+
+                        </Button>
+
+              
+
+                    </StackPanel>
+                </MaterialDesign:PopupBox>
+
+               
+
+
+            </StackPanel>
+
+            
+
+        </Grid>
+       
+
+
+        <Grid
+            x:Name="GridMenu"
+            Width="60"
+            HorizontalAlignment="Left"
+             Background="#2E333A"
+           
+            >
+            
+            <StackPanel
+                >
+                <Grid
+                    Height="150"
+                    
+                    >
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF667285" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+
+                    <Button
+                         x:Name="ButtonCloseMenu"
+                        Width="60"
+                        Height="60"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Visibility="Collapsed" Click="ButtonCloseMenu_Click"
+                       
+                        >
+                        <MaterialDesign:PackIcon
+                            Kind="ArrowLeft"
+                            Foreground="White"
+                            Width="25"
+                            Height="25"
+                           
+                            
+                            
+                            
+                            >
+
+                        </MaterialDesign:PackIcon>
+                    </Button>
+
+
+
+
+                    <Button
+                        x:Name="ButtonOpenMenu"
+                        Width="60"
+                        Height="60"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Click="ButtonOpenMenu_Click"
+                        
+                        >
+                        <MaterialDesign:PackIcon
+                            Kind="Menu"
+                            Foreground="White"
+                            Width="25"
+                            Height="25"
+                            
+                            
+                            
+                            >
+
+                        </MaterialDesign:PackIcon>
+                    </Button>
+
+
+
+
+
+
+
+                </Grid>
+
+
+                <ListView
+                    Background="#FF2E333A"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    >
+                    <ListViewItem x:Name="ListViewItem_Trang_chu"
+                        Height="60" Selected="ListViewItem_Trang_chu_Selected" 
+                        
+                        >
+                        <StackPanel
+                            Orientation="Horizontal"
+                           
+                            >
+                            <MaterialDesign:PackIcon
+                                Kind="Home"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Height="25"
+                                Width="25"
+                                Margin="10"
+                                >
+
+                            </MaterialDesign:PackIcon>
+
+                            <TextBlock
+                                Foreground="White"
+                                Text="Trang chủ"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="18"
+                                >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </ListViewItem>
+
+
+
+
+                    <ListViewItem
+                        Height="60"
+                        
+                        >
+                        <StackPanel
+                            Orientation="Horizontal"
+                           
+                            >
+                            <MaterialDesign:PackIcon
+                                Kind="Settings"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Height="25"
+                                Width="25"
+                                  Margin="10"
+                                >
+
+                            </MaterialDesign:PackIcon>
+
+                            <TextBlock
+                                Foreground="White"
+                                Text="Hệ thống"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="18"
+                                >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </ListViewItem>
+
+
+                    <ListViewItem
+                        Height="60"
+                        
+                        >
+                        <StackPanel
+                            Orientation="Horizontal"
+                           
+                            >
+                            <MaterialDesign:PackIcon
+                                Kind="ComputerClassic"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Height="25"
+                                Width="25"
+                                  Margin="10"
+                                >
+
+                            </MaterialDesign:PackIcon>
+
+                            <TextBlock
+                                Foreground="White"
+                                Text="Admin"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="18"
+                                >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </ListViewItem>
+
+
+
+
+                    <ListViewItem
+                        Height="60"
+                        
+                        >
+                        <StackPanel
+                            Orientation="Horizontal"
+                           
+                            >
+                            <MaterialDesign:PackIcon
+                                Kind="Extension"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Height="25"
+                                Width="25"
+                                  Margin="10"
+                                >
+
+                            </MaterialDesign:PackIcon>
+
+                            <TextBlock
+                                Foreground="White"
+                                Text="Tiện ích"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="18"
+                                >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </ListViewItem>
+
+
+
+                    <ListViewItem
+                        Height="60"
+                        
+                        >
+                        <StackPanel
+                            Orientation="Horizontal"
+                           
+                            >
+                            <MaterialDesign:PackIcon
+                                Kind="Help"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Height="25"
+                                Width="25"
+                                  Margin="10"
+                                >
+
+                            </MaterialDesign:PackIcon>
+
+                            <TextBlock
+                                Foreground="White"
+                                Text="Trợ giúp"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="18"
+                                >
+
+                            </TextBlock>
+                        </StackPanel>
+
+                    </ListViewItem>
+
+
+
+
+
+
+
+                </ListView>
+                
+                
+                
+            </StackPanel>
+
+           
+        </Grid>
+       
+    </Grid>
+</Window>

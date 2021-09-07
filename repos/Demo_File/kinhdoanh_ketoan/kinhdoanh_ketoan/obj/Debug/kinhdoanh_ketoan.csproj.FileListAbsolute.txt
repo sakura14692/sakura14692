@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\bin\Debug\kinhdoanh_ketoan.exe.config
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\bin\Debug\kinhdoanh_ketoan.exe
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\bin\Debug\kinhdoanh_ketoan.pdb
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.Form1.resources
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.Properties.Resources.resources
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.csproj.GenerateResource.cache
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.exe
+C:\Users\user\source\repos\kinhdoanh_ketoan\kinhdoanh_ketoan\obj\Debug\kinhdoanh_ketoan.pdb

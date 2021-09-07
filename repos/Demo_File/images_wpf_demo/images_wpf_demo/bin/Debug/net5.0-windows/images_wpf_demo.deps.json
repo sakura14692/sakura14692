@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "images_wpf_demo/1.0.0": {
+        "runtime": {
+          "images_wpf_demo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "images_wpf_demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

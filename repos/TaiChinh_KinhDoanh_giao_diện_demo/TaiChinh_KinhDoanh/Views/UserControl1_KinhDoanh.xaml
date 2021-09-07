@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TaiChinh_KinhDoanh.Views.UserControl1_KinhDoanh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaiChinh_KinhDoanh.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="800"
+
+             >
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.6,0.9" StartPoint="0.8,0.1">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF251E2E" Offset="0.6"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid>
+        <TabControl
+            BorderThickness="6" 
+            Background="{x:Null}"
+            >
+            <TabItem 
+                Header="Quản lý dự án đã triển khai"
+                     Foreground="White"
+              
+                     />
+
+            <TabItem Header="Xây dựng kế hoạch cho dự án mới"
+                     Foreground="White"
+                     >
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

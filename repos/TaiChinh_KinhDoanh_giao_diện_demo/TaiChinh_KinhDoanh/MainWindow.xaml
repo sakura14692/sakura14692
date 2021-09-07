@@ -1,0 +1,361 @@
+﻿<Window x:Class="TaiChinh_KinhDoanh.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaiChinh_KinhDoanh" xmlns:Material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024">
+    <Grid>
+        
+
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.8,1" StartPoint="0,0">
+                <GradientStop Color="Black" />
+                <GradientStop Color="#FF242B3A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="250"
+                >
+
+            </ColumnDefinition>
+            <ColumnDefinition
+                Width="*"
+                >
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="30"
+                >
+
+            </RowDefinition>
+            <RowDefinition
+                Height="*"
+                >
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+           
+           
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.8,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF1A1029" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       FontSize="20" FontFamily="Arial"
+                       Opacity="0.7"
+                       >
+                <Bold>Tài chính - Kinh Doanh</Bold>
+
+            </TextBlock>
+
+            <StackPanel
+                Grid.Row="1"
+                >
+                <Button x:Name="button_KinhDoanh"
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White" Click="button_KinhDoanh_Click" LostFocus="button_KinhDoanh_LostFocus" 
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Business"
+                            Foreground="White"
+                                           >
+                            
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Kinh Doanh
+                        </TextBlock>
+                    </Grid>
+                    
+                </Button>
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Shopping"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Tài chính gia đình
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Wallet"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Tài chính cá nhân
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="ComputerClassic"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Admin
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Settings"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Cấu hình
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Extension"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Tiện ích
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="180"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                    <Grid
+                        Width="150"
+                        >
+                        <Material:PackIcon 
+                            Kind="Help"
+                            Foreground="White"
+                                           >
+
+                        </Material:PackIcon>
+                        <TextBlock
+                            HorizontalAlignment="Right"
+                            Foreground="White"
+                            FontSize="16"
+                            >
+                            Trợ giúp
+                        </TextBlock>
+                    </Grid>
+
+                </Button>
+
+
+
+
+            </StackPanel>
+        </Grid>
+
+
+        <Grid
+            Grid.ColumnSpan="2" MouseDown="Grid_MouseDown"
+            
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.7,0" StartPoint="0.5,0.2">
+                    <GradientStop Color="MediumSlateBlue" Offset="1"/>
+                    <GradientStop Color="#FF332D56" Offset="0.2"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Background="{x:Null}"
+                >
+
+                <Button
+                    Width="25"
+                    Height="25"
+                    BorderBrush="{x:Null}" 
+                    
+                    
+                    >
+                    <Material:PackIcon 
+                        Kind="WindowMinimize"
+                        Foreground="White"
+                                       >
+
+                    </Material:PackIcon>
+                </Button>
+
+                <Button
+                    Width="25"
+                    Height="25"
+                    BorderBrush="{x:Null}"
+                    
+                    
+                    >
+                    <Material:PackIcon 
+                        Kind="WindowMaximize"
+                        Foreground="White"
+                                       >
+
+                    </Material:PackIcon>
+                </Button>
+
+                <Button
+                    Width="25"
+                    Height="25"
+                    BorderBrush="{x:Null}"
+                    
+                    
+                    >
+                    <Material:PackIcon 
+                        Kind="Power"
+                        Foreground="White"
+                                       >
+
+                    </Material:PackIcon>
+                </Button>
+
+
+
+
+            </StackPanel>
+
+           
+
+        </Grid>
+
+        <Grid x:Name="grid_Add_UserControls"
+            Grid.Column="1"
+            Grid.Row="1"
+            
+            >
+            <Image
+                Stretch="Fill"
+                Source="C:\Users\user\source\repos\TaiChinh_KinhDoanh\TaiChinh_KinhDoanh\images\trungpro.png"
+                ></Image>
+            
+        </Grid>
+        
+    </Grid>
+</Window>

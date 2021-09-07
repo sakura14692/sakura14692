@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uK899qTXYs+Jnqjdsd2uXFnxHzcJOAgXghDtQm/qWJZbjiPWrYiTC415xyIdhGshKwI+a5nNgsc+B1BULao+7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\Giao_Dien_Demo\\Giao_Dien_Demo\\Giao_Dien_Demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

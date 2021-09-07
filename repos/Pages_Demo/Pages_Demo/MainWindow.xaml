@@ -1,0 +1,50 @@
+﻿<Window x:Class="Pages_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pages_Demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+
+
+    </Window.Resources>
+    <Grid>
+        <Grid
+            VerticalAlignment="Top"
+           
+            >
+            <Button x:Name="bt_quay_lai"
+                Height="30"
+                Width="100"
+                HorizontalAlignment="Left"
+                Content="Quay lại"
+                FontSize="18"
+                Foreground="SlateBlue"
+                Background="Transparent" Click="Button_Click" 
+                
+                ></Button>
+            <Button x:Name="bt_di_den"
+                Width="100"
+                HorizontalAlignment="Left"
+                Content="Đi đến"
+                FontSize="18"
+                Foreground="SlateBlue"
+                Background="Transparent"
+              Margin="120,0,0,0" Click="Button_Click_1" Height="30" VerticalAlignment="Top"
+                
+                />
+        </Grid>
+        <Frame
+            x:Name="MainFrame" 
+            NavigationUIVisibility="Hidden"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Width="700"
+            Height="300"
+            >
+
+        </Frame>
+    </Grid>
+</Window>

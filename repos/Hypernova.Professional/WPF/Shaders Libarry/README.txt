@@ -1,0 +1,1 @@
+Please refer to the demo application and the demo app source code for this component in the other sibling .NET control folder - i.e. "Slideshow" folder, which uses this shaders library to render slides.

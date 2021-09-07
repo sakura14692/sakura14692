@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\testdulieu\testdulieu\bin\Debug\testdulieu.exe.config
+C:\Users\user\source\repos\testdulieu\testdulieu\bin\Debug\testdulieu.exe
+C:\Users\user\source\repos\testdulieu\testdulieu\bin\Debug\testdulieu.pdb
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.Properties.Resources.resources
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.csproj.GenerateResource.cache
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.exe
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.pdb
+C:\Users\user\source\repos\testdulieu\testdulieu\obj\Debug\testdulieu.Form1.resources

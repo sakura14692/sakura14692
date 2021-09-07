@@ -1,0 +1,71 @@
+﻿<Window x:Class="GlassButtonDemo.GlassButtonDemoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:commandVisuals="clr-namespace:Binarymission.WPF.Controls.CommandVisuals;assembly=Binarymission.WPF.Controls.GlassButton"
+        mc:Ignorable="d"
+        Background="Black"
+        WindowStartupLocation="CenterScreen"
+        Title="Binarymission GlassButton WPF Control demo"
+        Icon="App.ico"
+        Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="commandVisuals:GlassButton">
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Margin" Value="8" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal" 
+                HorizontalAlignment="Center">
+
+        <!-- An instance of the default color based button -->
+        <commandVisuals:GlassButton Foreground="White" Content="OK" />
+
+        <!-- A Salmon based button -->
+        <commandVisuals:GlassButton 
+            OnNormalBackgroundFillPart1="AntiqueWhite"
+            OnNormalBackgroundFillPart2="White"
+            OnNormalFillColorPart1="Red"
+            OnNormalFillColorPart2="LightSalmon"
+            OnNormalReflectionColorPart1="Red"
+            OnNormalReflectionColorPart2="LightGoldenrodYellow"
+            OnNormalReflectionColorPart3="Red"
+            OnHoverTopFillColorPart1="White"
+            OnHoverTopFillColorPart2="LightSalmon"
+            OnHoverTopFillColorPart3="LightSalmon"
+            OnHoverBottomFillColorPart1="Salmon"
+            OnHoverBottomFillColorPart2="LightSalmon"
+            OnPressedTopFillColorPart1="Salmon"
+            OnPressedTopFillColorPart2="Red"
+            OnPressedTopFillColorPart3="LightSalmon"
+            OnPressedBottomFillColorPart1="Red"
+            OnPressedBottomFillColorPart2="Salmon"
+            Foreground="Black" Content="OK" />
+
+        <!-- A Green based button -->
+        <commandVisuals:GlassButton 
+            OnNormalBackgroundFillPart1="Green"
+            OnNormalBackgroundFillPart2="White"
+            OnNormalFillColorPart1="Green"
+            OnNormalFillColorPart2="LightGreen"
+            OnNormalReflectionColorPart1="LightGreen"
+            OnNormalReflectionColorPart2="Green"
+            OnNormalReflectionColorPart3="White"
+            OnHoverTopFillColorPart1="White"
+            OnHoverTopFillColorPart2="LightGreen"
+            OnHoverTopFillColorPart3="Green"
+            OnHoverBottomFillColorPart1="White"
+            OnHoverBottomFillColorPart2="Green"
+            OnPressedTopFillColorPart1="Green"
+            OnPressedTopFillColorPart2="LightGreen"
+            OnPressedTopFillColorPart3="Green"
+            OnPressedBottomFillColorPart1="LightGreen"
+            OnPressedBottomFillColorPart2="ForestGreen"
+            Foreground="White" Content="OK" />
+
+    </StackPanel>
+</Window>

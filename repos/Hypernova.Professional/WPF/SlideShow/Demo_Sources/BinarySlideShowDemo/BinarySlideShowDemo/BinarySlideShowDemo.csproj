@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{132E22A0-D3FE-4DFC-A5DD-0910D68C3D3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BinarySlideShowDemo</RootNamespace>
+    <AssemblyName>BinarySlideShowDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Binarymission.WPF.Controls.AdvancedInteractionControls.SlideShow">
+      <HintPath>Depends\Binarymission.WPF.Controls.AdvancedInteractionControls.SlideShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Binarymission.WPF.Controls.BinaryRibbon">
+      <HintPath>Depends\Binarymission.WPF.Controls.BinaryRibbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Binarymission.WPF.Controls.InputControls.Spinners">
+      <HintPath>Depends\Binarymission.WPF.Controls.InputControls.Spinners.dll</HintPath>
+    </Reference>
+    <Reference Include="Binarymission.WPF.Shaders.Library">
+      <HintPath>Depends\Binarymission.WPF.Shaders.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="SlideShowDemoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\SecondsToMilliSecondsConverter.cs" />
+    <Compile Include="Converters\VisibilityConverter.cs" />
+    <Compile Include="Converters\ItemToBinarySlideShowItemConverter.cs" />
+    <Compile Include="Converters\WidthConverter.cs" />
+    <Compile Include="SlideShowDemoWindow.xaml.cs">
+      <DependentUpon>SlideShowDemoWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="binarymissionImages\16X16\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\16X16\Add.png" />
+    <Resource Include="binarymissionImages\16X16\Application.png" />
+    <Resource Include="binarymissionImages\16X16\Copy.png" />
+    <Resource Include="binarymissionImages\16X16\Cut.png" />
+    <Resource Include="binarymissionImages\16X16\FormatPainter.png" />
+    <Resource Include="binarymissionImages\16X16\gallary.png" />
+    <Resource Include="binarymissionImages\16X16\Paste.png" />
+    <Resource Include="binarymissionImages\16X16\PasteHyperlink.png" />
+    <Resource Include="binarymissionImages\16X16\PasteSpecial.png" />
+    <Resource Include="binarymissionImages\16X16\Save.png" />
+    <Resource Include="binarymissionImages\16X16\Undo2.png" />
+    <Resource Include="binarymissionImages\24X24\Undo.png" />
+    <Resource Include="binarymissionImages\24X24\Undo1.png" />
+    <Resource Include="binarymissionImages\24X24\Undo2.png" />
+    <Resource Include="binarymissionImages\32X32\972003formatsave.png" />
+    <Resource Include="binarymissionImages\32X32\Black.png" />
+    <Resource Include="binarymissionImages\32X32\Blue.png" />
+    <Resource Include="binarymissionImages\32X32\Close.png" />
+    <Resource Include="binarymissionImages\32X32\copy.png" />
+    <Resource Include="binarymissionImages\32X32\cut.png" />
+    <Resource Include="binarymissionImages\32X32\Email.png" />
+    <Resource Include="binarymissionImages\32X32\Glass.png" />
+    <Resource Include="binarymissionImages\32X32\New.png" />
+    <Resource Include="binarymissionImages\32X32\Open.png" />
+    <Resource Include="binarymissionImages\32X32\Orange.png" />
+    <Resource Include="binarymissionImages\32X32\Paste.png" />
+    <Resource Include="binarymissionImages\32X32\Prepare.png" />
+    <Resource Include="binarymissionImages\32X32\preview.png" />
+    <Resource Include="binarymissionImages\32X32\print.png" />
+    <Resource Include="binarymissionImages\32X32\Publish.png" />
+    <Resource Include="binarymissionImages\32X32\quickprint.png" />
+    <Resource Include="binarymissionImages\32X32\Save.png" />
+    <Resource Include="binarymissionImages\32X32\SaveAs.png" />
+    <Resource Include="binarymissionImages\32X32\saveastemplate.png" />
+    <Resource Include="binarymissionImages\32X32\sendmail.png" />
+    <Resource Include="binarymissionImages\32X32\Silver.png" />
+    <Resource Include="binarymissionImages\32X32\Undo.png" />
+    <Resource Include="binarymissionImages\32X32\Undo1.png" />
+    <Resource Include="binarymissionImages\32X32\Undo2.png" />
+    <Resource Include="binarymissionImages\32X32\White.png" />
+    <Resource Include="binarymissionImages\32X32\Yellow.png" />
+    <Resource Include="binarymissionImages\32X32\zip.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Cart-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Cart.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Block.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Cancel.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Del.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Edit.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Computer-Lock.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Favorite.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Flag-Blue.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Flag-Cyan.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Forbidden.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Home.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Image-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Info.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Key-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Key.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Mail-edit.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Mail-lock.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Note.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Ok.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Previous.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Right.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Talk-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Talk.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Trash-Add.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Trend Down.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Trend Up.png" />
+    <Resource Include="binarymissionImages\gallery16x16\User-Ok.png" />
+    <Resource Include="binarymissionImages\gallery16x16\User.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Web-Download.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Web-warn.png" />
+    <Resource Include="binarymissionImages\gallery16x16\Wizard.png" />
+    <Resource Include="binarymissionImages\gallery64\Image1.png" />
+    <Resource Include="binarymissionImages\gallery64\Image10.png" />
+    <Resource Include="binarymissionImages\gallery64\Image11.png" />
+    <Resource Include="binarymissionImages\gallery64\Image12.png" />
+    <Resource Include="binarymissionImages\gallery64\Image13.png" />
+    <Resource Include="binarymissionImages\gallery64\Image14.png" />
+    <Resource Include="binarymissionImages\gallery64\Image15.png" />
+    <Resource Include="binarymissionImages\gallery64\Image2.png" />
+    <Resource Include="binarymissionImages\gallery64\Image3.png" />
+    <Resource Include="binarymissionImages\gallery64\Image4.png" />
+    <Resource Include="binarymissionImages\gallery64\Image5.png" />
+    <Resource Include="binarymissionImages\gallery64\Image6.png" />
+    <Resource Include="binarymissionImages\gallery64\Image7.png" />
+    <Resource Include="binarymissionImages\gallery64\Image8.png" />
+    <Resource Include="binarymissionImages\gallery64\Image9.png" />
+    <Resource Include="binarymissionImages\general\cab72.png" />
+    <Resource Include="binarymissionImages\general\exit16.png" />
+    <Resource Include="binarymissionImages\general\gal72.png" />
+    <Resource Include="binarymissionImages\general\home32.png" />
+    <Resource Include="binarymissionImages\general\iNet72.png" />
+    <Resource Include="binarymissionImages\general\mozilla72.png" />
+    <Resource Include="binarymissionImages\general\wordoptions16.png" />
+    <Resource Include="binarymissionImages\redo.png" />
+    <Resource Include="binarymissionImages\redoimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\slideImages\1.jpg" />
+    <Resource Include="binarymissionImages\slideImages\2.jpg" />
+    <Resource Include="binarymissionImages\slideImages\3.jpg" />
+    <Resource Include="binarymissionImages\slideImages\4.jpg" />
+    <Resource Include="binarymissionImages\slideImages\5.jpg" />
+    <Resource Include="binarymissionImages\slideImages\6.jpg" />
+    <Resource Include="binarymissionImages\slideImages\7.jpg" />
+    <Resource Include="binarymissionImages\slideImages\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\buttonImages\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\buttonImages\fastforward.png" />
+    <Resource Include="binarymissionImages\buttonImages\pause.png" />
+    <Resource Include="binarymissionImages\buttonImages\fastrewind.png" />
+    <Resource Include="binarymissionImages\buttonImages\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\buttonImages\next.png" />
+    <Resource Include="binarymissionImages\buttonImages\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="binarymissionImages\32X32\search.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

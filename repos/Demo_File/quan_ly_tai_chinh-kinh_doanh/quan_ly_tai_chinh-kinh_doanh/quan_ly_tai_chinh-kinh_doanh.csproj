@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C30E2E2E-398B-4340-A941-FDD357EDFB9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>quan_ly_tai_chinh_kinh_doanh</RootNamespace>
+    <AssemblyName>quan_ly_tai_chinh-kinh_doanh</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Chi_tieu_Ca_nhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Chi_tieu_Ca_nhan.Designer.cs">
+      <DependentUpon>form_Load_csdl_Chi_tieu_Ca_nhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Chi_tieu_Gia_dinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Chi_tieu_Gia_dinh.Designer.cs">
+      <DependentUpon>form_Load_csdl_Chi_tieu_Gia_dinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Dau_tu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Dau_tu.Designer.cs">
+      <DependentUpon>form_Load_csdl_Dau_tu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Doi_tac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Doi_tac.Designer.cs">
+      <DependentUpon>form_Load_csdl_Doi_tac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Ke_hoach_dau_tu_moi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Ke_hoach_dau_tu_moi.Designer.cs">
+      <DependentUpon>form_Load_csdl_Ke_hoach_dau_tu_moi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Ke_toan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Ke_toan.Designer.cs">
+      <DependentUpon>form_Load_csdl_Ke_toan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Quy_ca_Nhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Quy_ca_Nhan.Designer.cs">
+      <DependentUpon>form_Load_csdl_Quy_ca_Nhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Tai_Khoan_ca_Nhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Tai_Khoan_ca_Nhan.Designer.cs">
+      <DependentUpon>form_Load_csdl_Tai_Khoan_ca_Nhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Tai_khoan_Chung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Tai_khoan_Chung.Designer.cs">
+      <DependentUpon>form_Load_csdl_Tai_khoan_Chung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Thu_nhap_Ca_nhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Thu_nhap_Ca_nhan.Designer.cs">
+      <DependentUpon>form_Load_csdl_Thu_nhap_Ca_nhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_csdl_Thu_nhap_Gia_dinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_csdl_Thu_nhap_Gia_dinh.Designer.cs">
+      <DependentUpon>form_Load_csdl_Thu_nhap_Gia_dinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Load_quy_Gia_dinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Load_quy_Gia_dinh.Designer.cs">
+      <DependentUpon>form_Load_quy_Gia_dinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Main_tai_chinh_Kinh_doanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Main_tai_chinh_Kinh_doanh.Designer.cs">
+      <DependentUpon>form_Main_tai_chinh_Kinh_doanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_Mo_man.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Mo_man.Designer.cs">
+      <DependentUpon>form_Mo_man.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form_Load_csdl_Chi_tieu_Ca_nhan.resx">
+      <DependentUpon>form_Load_csdl_Chi_tieu_Ca_nhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Chi_tieu_Gia_dinh.resx">
+      <DependentUpon>form_Load_csdl_Chi_tieu_Gia_dinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Dau_tu.resx">
+      <DependentUpon>form_Load_csdl_Dau_tu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Doi_tac.resx">
+      <DependentUpon>form_Load_csdl_Doi_tac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Ke_hoach_dau_tu_moi.resx">
+      <DependentUpon>form_Load_csdl_Ke_hoach_dau_tu_moi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Ke_toan.resx">
+      <DependentUpon>form_Load_csdl_Ke_toan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Quy_ca_Nhan.resx">
+      <DependentUpon>form_Load_csdl_Quy_ca_Nhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Tai_Khoan_ca_Nhan.resx">
+      <DependentUpon>form_Load_csdl_Tai_Khoan_ca_Nhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Tai_khoan_Chung.resx">
+      <DependentUpon>form_Load_csdl_Tai_khoan_Chung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Thu_nhap_Ca_nhan.resx">
+      <DependentUpon>form_Load_csdl_Thu_nhap_Ca_nhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_csdl_Thu_nhap_Gia_dinh.resx">
+      <DependentUpon>form_Load_csdl_Thu_nhap_Gia_dinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Load_quy_Gia_dinh.resx">
+      <DependentUpon>form_Load_quy_Gia_dinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Main_tai_chinh_Kinh_doanh.resx">
+      <DependentUpon>form_Main_tai_chinh_Kinh_doanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Mo_man.resx">
+      <DependentUpon>form_Mo_man.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Home-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Extension-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dau_tu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business-Collaboration-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-Calculator-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-wallet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chi_tieu_gia_dinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thu_nhap_ca_nhan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-Pig-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-Pig-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chi_tieu_ca_nhan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tai_khoan_ca_nhan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iPad-front-askew-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad-Bloc-notes-2-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books-2-icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giai_thich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-preferences-system-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planet-space-and-stars.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Form_Dang_Nhap_wpf_</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dollar-USD-icon.png" />
+    <None Remove="logo2.png" />
+    <None Remove="logo4.png" />
+    <None Remove="trungpro.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.8.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Dollar-USD-icon.png" />
+    <Resource Include="logo2.png" />
+    <Resource Include="logo4.png" />
+    <Resource Include="trungpro.png" />
+  </ItemGroup>
+
+</Project>

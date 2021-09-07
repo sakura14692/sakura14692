@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9Ugqk6PTXeEVyvmB0uLR2IhEbSrelX43un/c24Qx+oF7hhkIZP2IAyawwTfk07n51mcE6LOd5I7mc2E+h4+77A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\TaiChinh_KinhDoanh_giao_diện_demo\\TaiChinh_KinhDoanh\\TaiChinh_KinhDoanh.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\materialdesigncolors\\2.0.1\\materialdesigncolors.2.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\materialdesignthemes\\4.1.0\\materialdesignthemes.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

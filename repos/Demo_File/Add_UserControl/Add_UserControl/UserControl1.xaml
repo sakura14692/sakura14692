@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Add_UserControl.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Add_UserControl"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Stretch"
+             Padding="-5"
+             mc:Ignorable="d" d:DesignWidth="800" Height="414">
+    <Grid>
+        <TextBlock Padding="225" Foreground="SlateBlue" FontSize="50" Height="417"  HorizontalAlignment="Center" VerticalAlignment="Center"> test userControl</TextBlock>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="44,38,0,0" VerticalAlignment="Top" Height="79" Width="203" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>

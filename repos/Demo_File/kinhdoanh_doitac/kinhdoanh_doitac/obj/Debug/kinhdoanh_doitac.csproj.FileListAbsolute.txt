@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\bin\Debug\kinhdoanh_doitac.exe.config
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\bin\Debug\kinhdoanh_doitac.exe
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\bin\Debug\kinhdoanh_doitac.pdb
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.Form1.resources
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.Properties.Resources.resources
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.csproj.GenerateResource.cache
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.exe
+C:\Users\user\source\repos\kinhdoanh_doitac\kinhdoanh_doitac\obj\Debug\kinhdoanh_doitac.pdb

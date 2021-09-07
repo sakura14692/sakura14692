@@ -1,0 +1,22 @@
+﻿<Window x:Class="Truyen_gia_tri_giua_cac_Form.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Truyen_gia_tri_giua_cac_Form"
+        mc:Ignorable="d"
+        Name="form1"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid Height="434" VerticalAlignment="Bottom">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF7D16C2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox Foreground="LightGreen" BorderBrush="DarkBlue" Background="Transparent" Margin="0,0,300,0" x:Name="tb1" Height="30" Width="250"></TextBox>
+        <Label x:Name="lblInfo" FontSize="30" Foreground="DarkSlateBlue" Content=" " HorizontalAlignment="Left" Margin="116,76,0,0" VerticalAlignment="Top" Width="259"/>
+        <Button   Foreground="GreenYellow" Background="Transparent"   FontSize="20" Content="Gửi lệnh" HorizontalAlignment="Left" Margin="305,254,0,0" VerticalAlignment="Top" Click="Button_Click_1" RenderTransformOrigin="-2.197,7.445"/>
+    </Grid>
+
+</Window>
